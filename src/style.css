@@ -1,0 +1,239 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6f7f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(https://th.bing.com/th/id/OIP.OZuPEVJTBsSwAKxhPsi9-AHaEc?rs=1&pid=ImgDetMain);
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  background-color:#274472;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #C3E0E5;
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.add-contact {
+  background-color: #f0f0f0;
+  padding: 29px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-contact h2 {
+  color: #333333;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.add-contact input, .add-contact button, .add-contact select {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.add-contact input[type="file"] {
+  padding: 7px;
+  background-color: #183C5A;
+  color: #C3E0E5;
+}
+
+.add-contact .buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.add-contact .buttons button {
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background: linear-gradient(75deg, #183C5A, #183C5A);
+  box-shadow: 0 0 10px rgba(24, 60, 90, 0.6);
+}
+
+.add-contact .buttons button:hover {
+  background-color: #0056b3;
+}
+
+.saved-contacts {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.saved-contacts h2 {
+  color: #333333;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.contact-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border-color: #183C5A;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  border: 4px solid #f6f9fd;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-info h3 {
+  color: #333333;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  color: #525151;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.edit-btn {
+  background-color:  #183C5A;
+  color: #ffffff;
+}
+
+.delete-btn {
+  background-color:  #183C5A;
+  color: #ffffff;
+}
+
+.edit-btn:hover {
+  background-color:  #183C5A;
+}
+
+.delete-btn:hover {
+  background-color:  #183C5A;
+}
+
+.error {
+  color: #e82323;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.phone-input {
+  display: flex;
+}
+
+.country-code {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.country-code select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.image-format-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.image-format-popup h3 {
+  color: #3c3c3c;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.image-format-popup button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.image-format-popup button:hover {
+  background-color: #82b7f0;
+} 
+
+
